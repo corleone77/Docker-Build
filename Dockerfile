@@ -5,3 +5,4 @@ RUN apt-get install -y \
   unzip \
   pandoc
 COPY . ./
+RUN npm install
