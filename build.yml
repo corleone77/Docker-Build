@@ -26,14 +26,7 @@ steps:
       containerregistrytype: 'Container Registry'
       dockerRegistryEndpoint: 'dockerhub-microsoftlearning-organization'
   - task: Docker@1
-    displayName: 'Push Versioned Image to Docker Hub
-    inputs:
-      command: push
-      imageName: '$(Image.Tag.Version)'
-      qualifyImageName: false
-  - task: Docker@1
     displayName: 'Push Latest Image to Docker Hub
     inputs:
       command: push
       imageName: '$(Image.Tag.Latest)'
-      qualifyImageName: false
