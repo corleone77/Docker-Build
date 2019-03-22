@@ -13,6 +13,7 @@ steps:
       dockerFile: 'Dockerfile'
       imageName: '$(Image.Name)'
       addLatestTag: true
+      addDefaultLabels: false
   - task: Docker@1
     displayName: 'Add Version Tag to Image'
     inputs:
@@ -25,3 +26,8 @@ steps:
       command: login
       containerregistrytype: 'Container Registry'
       dockerRegistryEndpoint: 'dockerhub-microsoftlearning-organization'
+  - task: Docker@1
+    displayName: 'Push Latest Image'
+    inputs:
+      command: push
+      imageName: '$(Image.Tag.Latest)'
