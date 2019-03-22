@@ -23,5 +23,5 @@ steps:
     displayName: 'Login to Docker Hub'
     inputs:
       command: login
-      containerregistrytype: 'Container Registry'
+      containerregistrytype: Container Registry
       dockerRegistryEndpoint: 'dockerhub-microsoftlearning-organization'
