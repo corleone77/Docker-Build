@@ -20,13 +20,9 @@ steps:
       imageName: '$(Image.Tag.Latest)'
       arguments: '$(Image.Tag.Version)'
   - task: Docker@1
-    displayName: 'Login to Docker Hub'
+    displayName: 'Push Latest Image'
     inputs:
-      command: login
       containerregistrytype: 'Container Registry'
       dockerRegistryEndpoint: 'dockerhub-microsoftlearning-organization'
-  - task: Docker@1
-    displayName: 'Push Latest Image to Docker Hub
-    inputs:
       command: push
       imageName: '$(Image.Tag.Latest)'
