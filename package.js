@@ -25,9 +25,9 @@ marked.setOptions({
 var version = args.version || "0.0.0";
 var course = args.course;
 
-var filesInputDirectory = path.join(__dirname, "../Allfiles/");
-var docLabsInputDirectory = path.join(__dirname, "../Instructions/Labs/");
-var docDemosInputDirectory = path.join(__dirname, "../Instructions/Demos/");
+var filesInputDirectory = path.join(__dirname, "/Allfiles/");
+var docLabsInputDirectory = path.join(__dirname, "/Instructions/Labs/");
+var docDemosInputDirectory = path.join(__dirname, "/Instructions/Demos/");
 var tempDirectory = path.join(__dirname, "tmp");
 var docsTempDirectory = path.join(tempDirectory, "Instructions/");
 var filesTempDirectory = path.join(tempDirectory, "AllFiles/");
