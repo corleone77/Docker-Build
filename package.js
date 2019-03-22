@@ -23,7 +23,7 @@ marked.setOptions({
 });
 
 var version = args.version || "0.0.0";
-var course = args.course || "00000";
+var course = args.course;
 
 var filesInputDirectory = path.join(__dirname, "../Allfiles/");
 var docLabsInputDirectory = path.join(__dirname, "../Instructions/Labs/");
@@ -97,7 +97,7 @@ function cleanup() {
 }
 
 function buildDocx(markdownPath, baseFileName) {
-    var docxFilePath = createDocxFile(markdownPath, course + '_' + baseFileName + '.docx');
+    var docxFilePath = createDocxFile(markdownPath, course ? (course + '_') : '' + baseFileName + '.docx');
     return docxFilePath;
 }
 
