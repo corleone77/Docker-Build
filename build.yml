@@ -1,0 +1,22 @@
+pool:
+  vmImage: 'Ubuntu 16.04'
+variables:
+  Image.Name: 'microsoftlearning/markdown-build'
+steps:
+  - task: Docker@1
+    displayName: 'Build Docker Image'
+    inputs:
+      command: build
+      dockerFile: 'Dockerfile'
+      imageName: '$(Image.Name)'
+      addDefaultLabels: true
+- task: Docker@1
+  displayName: 'Add Version Tag'
+  inputs:
+    command: tag
+    imageName: '$(Image.Name):$(Build.BuildNumber)'
+- task: Docker@1
+  displayName: 'Add Latest Tag'
+  inputs:
+    command: tag
+    imageName: '$(Image.Name):latest'
