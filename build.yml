@@ -27,6 +27,11 @@ steps:
       containerregistrytype: 'Container Registry'
       dockerRegistryEndpoint: 'dockerhub-microsoftlearning-organization'
   - task: Docker@1
+    displayName: 'Push Versioned Image'
+    inputs:
+      command: push
+      imageName: '$(Image.Tag.Version)'
+  - task: Docker@1
     displayName: 'Push Latest Image'
     inputs:
       command: push
