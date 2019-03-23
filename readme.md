@@ -1,5 +1,7 @@
 # Build Instructions
 
+![Build Status](https://microsoftdigitallearning.visualstudio.com/Courseware/_apis/build/status/MicrosoftLearning.Docker-Build?branchName=master)
+
 ## Requirements
 
 - Latest version of [pandoc](http://pandoc.org/)
