@@ -40,4 +40,4 @@
 
 ## Docker Image
 
-If you do not have Node, Pandoc Git installed on your local machine, we have a Docker Hub image with the required versions of each tool located at: [microsoftlearning/markdown-build](https://cloud.docker.com/u/microsoftlearning/repository/docker/microsoftlearning/markdown-build)
+If you do not have Node, Pandoc Git installed on your local machine, we have a Docker Hub image with the required versions of each tool located at: [microsoftlearning/markdown-build](https://hub.docker.com/r/microsoftlearning/markdown-build)
